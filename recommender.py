@@ -1,9 +1,6 @@
 import streamlit as st
 import pickle
 import pandas as pd
-import numpy as np
-import sklearn
-from sklearn.decomposition import TruncatedSVD
 from sklearn.neighbors import NearestNeighbors
 
 
@@ -50,7 +47,6 @@ def show_rec_page():
         # Get a dataframe of all games that have a correlation score less than 1 (which is the user selected game)
         # and above .8 (roughly a B rating).
         possible_games = game_data[game_data['BGGId'].isin(list(game_ids[(calc_rec < .999999) & (calc_rec > 0.8)]))]
-        #print(possible_games)
         # Calculate nearest neighbor values from the possible games list.
         X = possible_games.iloc[:, [7, 10, 11, 12]].values
         nbrs = NearestNeighbors(n_neighbors=3).fit(X)
