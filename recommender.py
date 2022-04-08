@@ -62,6 +62,7 @@ def show_rec_page():
         with col1:
             st.subheader(games_to_recommend.Name.iloc[0])
             st.image(games_to_recommend.ImagePath.iloc[0])
+            st.text(f'Avg Rating: {games_to_recommend.AvgRating.iloc[0]}')
             st.text(f'Game Complexity: {games_to_recommend.GameWeight.iloc[0]}')
             st.text(f'Max Players: {games_to_recommend.MaxPlayers.iloc[0]}')
             st.text(f'Avg Playtime: {games_to_recommend.MfgPlaytime.iloc[0]}')
@@ -70,6 +71,7 @@ def show_rec_page():
         with col2:
             st.subheader(games_to_recommend.Name.iloc[1])
             st.image(games_to_recommend.ImagePath.iloc[1])
+            st.text(f'Avg Rating: {games_to_recommend.AvgRating.iloc[1]}')
             st.text(f'Game Complexity: {games_to_recommend.GameWeight.iloc[1]}')
             st.text(f'Max Players: {games_to_recommend.MaxPlayers.iloc[1]}')
             st.text(f'Avg Playtime: {games_to_recommend.MfgPlaytime.iloc[1]}')
@@ -78,8 +80,10 @@ def show_rec_page():
         with col3:
             st.subheader(games_to_recommend.Name.iloc[2])
             st.image(games_to_recommend.ImagePath.iloc[2])
+            st.text(f'Avg Rating: {games_to_recommend.AvgRating.iloc[2]}')
             st.text(f'Game Complexity: {games_to_recommend.GameWeight.iloc[2]}')
             st.text(f'Max Players: {games_to_recommend.MaxPlayers.iloc[2]}')
             st.text(f'Avg Playtime: {games_to_recommend.MfgPlaytime.iloc[2]}')
             st.text(f'Minimum Age: {games_to_recommend.MfgAgeRec.iloc[2]}')
+
 
